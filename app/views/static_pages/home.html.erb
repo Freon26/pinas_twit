@@ -1,0 +1,45 @@
+<% if signed_in? %>
+  <div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/user_info' %>
+      </section>
+      <section>
+        <%= render 'shared/stats' %>
+      </section>
+      <section>
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+    <div class="span8">
+      <h3>Ano ang l8est?</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>  
+<% else %>
+  <div class="center hero-unit">
+    <h1>Kamusta na frend! Ano l8est sa iyo?</h1>
+
+    <h2>
+      This is the home page for the Pinas Twitter made by John Steven Tapican. <br />
+
+      <br />
+
+      Dito mo pwede sabihin ang kahit na anong nasa puso mo. Mapaprof man yan na mainit ang dugo sa iyo. Jowa na ipanagpalit ka sa iba. O boss mo na power-tripper. Kebz lang yan. <br />
+
+      <br />
+
+      Hindi ka drama queen. Or maybe you are, but who cares? Eh gusto mong malaman ng buong mundo kung bakit ka nagkakandaleche-leche ang buhay mo. Ayaw maniwala ng nanay mo? Tamad ka lang raw, sabi ng asawa mo? Whatever. Don't mind them. Let us know why you suck, and let everyone decide kung panalo ang experience mo (or loser ka lang talaga. LOL) <br />
+
+      <br />
+
+      Post your story. Hindi ka nag-iisa, kaya go, magkwento ka na! (Tsismoso kami, okay?)
+      
+    </h2>
+
+    <%= link_to "Sign up now!", signup_path, 
+                                class: "btn btn-large btn-primary" %>
+  </div>
+
+  <%= link_to image_tag("rails.png", alt: "Rails"), '#' %>
+<% end %> 
